@@ -11,6 +11,10 @@
         {{- if $attrs.indent }} data-indent="true"{{ end }}
         {{- if $attrs.tocNum }} data-toc-num="true"{{ end }}>
 
+            {{ with .Params.image }}
+                <img style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-height: 300px; border: 0px dashed black;" src="shamama.png"></img>
+            {{ end }}
+
             <h1 class="post-title p-name">{{ (partial "utils/title.html" (dict "$" $ "title" $.Title)).htmlTitle }}</h1>
 
             {{ with .Params.subtitle }}
